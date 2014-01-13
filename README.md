@@ -12,7 +12,7 @@ sails lift
 
 ```
 
-Set for production and port 80.
+Set for production and port 8080 for use with nginx proxy.
 
 This will just use the sails disk, but if you want persistent storage you can use one of the sails adapters to have it.
 
