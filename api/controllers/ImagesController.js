@@ -32,18 +32,18 @@ module.exports = {
 
 		fs.copy(tmp_path, target_path, function(err) {
 			if (err) throw err;
-			fs.copy(target_path, 'assets/uploads/photos' + name, function(err) { });
+			fs.copy(target_path, 'i' + name, function(err) { });
 			fs.unlink(tmp_path, function() {
 				if (err) throw err;
 				console.log('File uploaded to: ' + target_path);
-				Images.create( { message: message, source: source, media: name, url: 'http://dev.cauley.co:1337/assets/uploads/photos' + name }).done(function(err, p) {
+				Images.create( { message: message, source: source, media: name, url: 'http://piec.es/i' + name }).done(function(err, p) {
   				if (err) {
     				console.log(err);
     				  res.set('error', 'DB Error');
     				  res.send(500, {error: 'DB Error'});
     				} else {
     				  // res.redirect('/images/');
-              res.json( { url: 'http://dev.cauley.co:1337/assets/uploads/photos' + name } );
+              res.json( { url: 'http://piec.es/i' + name } );
   				}
 				});
 				
