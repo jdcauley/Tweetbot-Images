@@ -36,14 +36,14 @@ module.exports = {
 			fs.unlink(tmp_path, function() {
 				if (err) throw err;
 				console.log('File uploaded to: ' + target_path);
-				Images.create( { message: message, source: source, media: name, url: 'http://piec.es/i' + name }).done(function(err, p) {
+				Images.create( { message: message, source: source, media: name, url: 'http://your.url/i' + name }).done(function(err, p) {
   				if (err) {
     				console.log(err);
     				  res.set('error', 'DB Error');
     				  res.send(500, {error: 'DB Error'});
     				} else {
     				  // res.redirect('/images/');
-              res.json( { url: 'http://piec.es/i' + name } );
+              res.json( { url: 'http://your.url/i' + name } );
   				}
 				});
 				
