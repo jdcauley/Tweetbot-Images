@@ -16,6 +16,9 @@
  */
 
 module.exports = {
+  get: function (req, res) {
+    res.sendfile(req.path.substr(1));
+  },
     
   create: function(req, res) {
 		var fs = require('fs-extra');

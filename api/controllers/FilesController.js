@@ -16,11 +16,8 @@
  */
 
 module.exports = {
-  
-   get: function (req, res) {
-    res.sendfile(req.path.substr(1));
-  }
-  
+
+
 
 
   /**
@@ -29,5 +26,5 @@ module.exports = {
    */
   // _config: {}
 
-  
+
 };

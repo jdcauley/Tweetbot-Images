@@ -36,7 +36,7 @@ module.exports.routes = {
   //  view: 'home/index'
   // },
   'get /i/*': {
-    controller: 'FilesController',
+    controller: 'ImagesController',
     action: 'get'
   }
 
